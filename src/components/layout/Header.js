@@ -1,10 +1,8 @@
 // import React, { Fragment } from 'react'
 // import '../../App.css'
 
-
-
 // const Header = () => {
-    
+
 //     return (
 //         <Fragment>
 //           <nav className="navbar row">
@@ -50,7 +48,6 @@
 
 // import { Link } from "react-router-dom";
 
-
 // const Header = () => {
 
 //     return (
@@ -69,9 +66,6 @@
 //                     {/* <button className="btn" id="login_btn">Login</button> */}
 //                     <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>
 
-
-
-
 //                     <span id="cart" className="ml-3">Cart</span>
 //                     <span className="ml-1" id="cart_count">2</span>
 //                 </div>
@@ -81,7 +75,6 @@
 // }
 
 // export default Header
-
 
 //WITH LOGOUT
 
@@ -117,10 +110,10 @@ const Header = () => {
   const logoutHandler = () => {
     dispatch(logout());
 
-    notify("Logged Out Successfully");
+    notify("Logged Out Successfully!!");
   };
 
-  const { cartItems } = useSelector(state => state.cart)
+  const { cartItems } = useSelector((state) => state.cart);
 
   return (
     <Fragment>
@@ -148,7 +141,9 @@ const Header = () => {
             {/* <span className="ml-1" id="cart_count">
               2
             </span> */}
-            <span className="ml-1" id="cart_count">{cartItems.length}</span>
+            <span className="ml-1" id="cart_count">
+              {cartItems.length}
+            </span>
           </Link>
 
           {user ? (
