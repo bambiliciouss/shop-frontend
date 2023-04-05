@@ -802,7 +802,6 @@ export const logout = () => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
-      withCredentials: true,
     };
     await axios.get(`${process.env.REACT_APP_API}/api/v1/logout`, config);
     dispatch({
